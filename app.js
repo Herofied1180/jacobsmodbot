@@ -189,7 +189,7 @@ client.on('message', function(message) {
   if (cmd) {
     message.delete();
     if (perms < cmd.conf.permLevel) return;
-    cmd.run(client, message, params, perms);
+    cmd.run(client, message);
   }
 
 });
