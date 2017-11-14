@@ -194,4 +194,4 @@ client.on('message', function(message) {
 
 });
 
-client.login(settings.SonicBotPublicToke);
+client.login(process.env.BOT_TOKEN);
