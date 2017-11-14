@@ -1,9 +1,9 @@
 const settings = require('../app.js');
 const YTDL = require('ytdl-core')
 const Discord = require('discord.js')
-var servers = {};
 
 exports.run = (client, message) => {
+  var servers = {};
   var server = servers[message.guild.id];
 
   if (message.guild.voiceConnection)
