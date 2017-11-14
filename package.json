@@ -1,10 +1,10 @@
 {
-  "name": "sonic-bot",
-  "version": "1.2.5",
-  "description": "SonicBot Server",
+  "name": "jacobsmodbot",
+  "version": "0.0.0",
+  "description": "Jacobs Mod Bot Server",
   "main": "app.js",
   "scripts": {
-    
+    "start": "node app.js"
   },
   "author": "SonicCoding1180",
   "license": "MIT",
