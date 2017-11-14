@@ -8,10 +8,6 @@ exports.run = (client, message) => {
 
   if (message.guild.voiceConnection)
   {
-      for (var i = server.queue.length - 1; i >= 0; i--) 
-      {
-          server.queue.splice(i, 1);
-   }
       server.dispatcher.end();
       console.log("[" + new Date().toLocaleString() + "] Stopped the queue.");
       message.channel.send("Stopped song.");
