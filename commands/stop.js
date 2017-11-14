@@ -1,14 +1,13 @@
-const settings = require('../app.js')
+const settings = require('../app.js');
+const YTDL = require('ytdl-core')
 const Discord = require('discord.js')
 var servers = {};
 
 exports.run = (client, message) => {
-  const YTDL = require('ytdl-core')
-  
   var server = servers[message.guild.id];
 
   server.dispatcher = connection.playStream(YTDL(server.queue[0], {filter: "audioonly"}));
-
+  
   if (message.guild.voiceConnection)
   {
       for (var i = server.queue.length - 1; i >= 0; i--) 
