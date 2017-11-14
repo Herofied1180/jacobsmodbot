@@ -11,7 +11,9 @@ exports.run = (client, message) => {
       server.dispatcher.end();
       console.log("[" + new Date().toLocaleString() + "] Stopped the queue.");
       message.channel.send("Stopped song.");
-  }﻿
+  }﻿ else {
+    message.channel.send("Song isn't playing.");
+  }
 }
 
 
