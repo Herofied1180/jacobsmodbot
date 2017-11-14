@@ -3,16 +3,11 @@ const YTDL = require('ytdl-core')
 const Discord = require('discord.js')
 
 exports.run = (client, message) => {
-
-  if (message.guild.voiceConnection)
-  {
-      var servers = {};
-      var server = servers[message.guild.id];
-      server.dispatcher.end();
-      console.log("[" + new Date().toLocaleString() + "] Stopped the queue.");
-      message.channel.send("Stopped song.");
-  }﻿ else {
-    message.channel.send("Song isn't playing.");
+  if (message.guild.voiceConnection) {
+    message.guild.voiceConnection.disconnect();
+    message.channel.send("Stopped song.")
+  } else {
+    message.channel.send("No songs are playing.")
   }
 }
 
