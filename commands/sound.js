@@ -7,18 +7,14 @@ function play(connection, message, sound) {
 
   if (sound == "wrong") {
     server.queue[0] = 'https://www.youtube.com/watch?v=RT3DirvAL-U&index=3&list=PLA_ZFp8wPEPBMbtlYW32cgqQtP549lwVa'
-    server.dispatcher = connection.playStream(YTDL(server.queue[0], {filter: "audioonly"}))
-      .then => {
-        connection.disconnect();
-      }
+    server.dispatcher = connection.playStream(YTDL(server.queue[0], {filter: "audioonly"}));
+    connection.disconnect();
   } else if (sound == "troll") {
     //server.dispatcher = connection.playStream(YTDL('', {filter: "audioonly"}));
     message.channel.send('W.I.P Sound Effect')
   } else if (sound == "undertale") {
-    server.dispatcher = connection.playFile('test.mp3')
-      .then => {
-        connection.disconnect();
-      }
+    server.dispatcher = connection.playFile('test.mp3');
+    connection.disconnect();
   }
 
   server.queue.shift();
