@@ -6,7 +6,8 @@ function play(connection, message, sound) {
   var server = servers[message.guild.id];
 
   if (sound == "wrong") {
-    server.dispatcher = connection.playStream(YTDL('https://www.youtube.com/watch?v=RT3DirvAL-U&index=3&list=PLA_ZFp8wPEPBMbtlYW32cgqQtP549lwVa', {filter: "audioonly"}));
+    server.queue[0] = 'https://www.youtube.com/watch?v=RT3DirvAL-U&index=3&list=PLA_ZFp8wPEPBMbtlYW32cgqQtP549lwVa'
+    server.dispatcher = connection.playStream(YTDL(server.queue[0], {filter: "audioonly"}));
   } else if (sound == "troll") {
     //server.dispatcher = connection.playStream(YTDL('', {filter: "audioonly"}));
     message.channel.send('W.I.P Sound Effect')
