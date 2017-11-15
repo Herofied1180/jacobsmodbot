@@ -52,12 +52,12 @@ exports.run = (client, message) => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['Play'],
+  aliases: ['sound'],
   permLevel: 0
 };
 
 exports.help = {
-  name: 'play',
-  description: 'Plays a yotube video in a voice channel via link',
-  usage: 'play [youtube link]'
+  name: 'sound',
+  description: 'Plays a sound effect in a voice channel',
+  usage: 'sound [sound effect]'
 };
