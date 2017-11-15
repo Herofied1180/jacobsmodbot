@@ -1,13 +1,12 @@
 exports.run = (client, message) => {
-  var c = Math.floor(Math.random() * (0-1)+0);
+  var c = [
+    "you got heads!",
+    "you got tails!"
+  ]
   message.channel.send('Flipping coin...')
 .then(msg => {
-      if (c = 0) {
-        message.reply('you got tails!');
-      } else if (c = 1) {
-        message.reply('you got heads!');
-      }
-    });
+    message.reply(c[Math.floor(Math.random() * c.length)]);
+  });
 };    
 
 exports.conf = {
