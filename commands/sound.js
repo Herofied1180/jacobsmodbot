@@ -5,16 +5,18 @@ var servers = {};
 function play(connection, message, sound) {
   var server = servers[message.guild.id];
 
+  if (message.guild.voiceChannel) {
+    connection.disconnect();
+  }
+
   if (sound == "wrong") {
     server.queue[0] = 'https://www.youtube.com/watch?v=RT3DirvAL-U&index=3&list=PLA_ZFp8wPEPBMbtlYW32cgqQtP549lwVa'
     server.dispatcher = connection.playStream(YTDL(server.queue[0], {filter: "audioonly"}));
-    connection.disconnect();
   } else if (sound == "troll") {
     //server.dispatcher = connection.playStream(YTDL('', {filter: "audioonly"}));
     message.channel.send('W.I.P Sound Effect')
   } else if (sound == "undertale") {
-    server.dispatcher = connection.playFile('/test.mp3');
-    connection.disconnect();
+    server.dispatcher = connection.playFile('test.mp3');
   }
 
   server.queue.shift();
