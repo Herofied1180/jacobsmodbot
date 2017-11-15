@@ -1,5 +1,5 @@
 exports.run = (client, message) => {
-  var c = Math.floor(Math.random(0,1));
+  var c = Math.floor(Math.random() * (0-1)+0);
   message.channel.send('Flipping coin...')
 .then(msg => {
       if (c = 0) {
