@@ -12,7 +12,7 @@ function play(connection, message, sound) {
     //server.dispatcher = connection.playStream(YTDL('', {filter: "audioonly"}));
     message.channel.send('W.I.P Sound Effect')
   } else if (sound == "undertale") {
-    server.dispatcher = connection.playFile(require('../test.mp3');
+    server.dispatcher = connection.playFile(require('../test.mp3'));
   } else {
     message.channel.send('Invalid Sound Effect');
   }
