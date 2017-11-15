@@ -5,10 +5,6 @@ var servers = {};
 function play(connection, message, sound) {
   var server = servers[message.guild.id];
 
-  if (message.guild.voiceChannel) {
-    connection.disconnect();
-  }
-
   if (sound == "wrong") {
     server.queue[0] = 'https://www.youtube.com/watch?v=RT3DirvAL-U&index=3&list=PLA_ZFp8wPEPBMbtlYW32cgqQtP549lwVa'
     server.dispatcher = connection.playStream(YTDL(server.queue[0], {filter: "audioonly"}));
