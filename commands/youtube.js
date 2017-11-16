@@ -1,11 +1,11 @@
 exports.run = (client, message) => {
-  message.channel.send('W.I.P(Work in progress) Command.');
-};    
+  message.channel.send('Youtube Channel: W.I.P');
+};
 
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['Youtube'],
+  aliases: ['Youtube', 'yt'],
   permLevel: 0
 };
 
