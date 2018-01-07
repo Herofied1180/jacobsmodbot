@@ -1,6 +1,6 @@
 exports.run = (client, message) => {
     //Has The Specified Client Id
-    message.channel.send('Shutdown '+BotName+'.');
+    message.channel.send('Shutting down...');
     client.destroy((err) => {
       console.log(err);
     });
