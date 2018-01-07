@@ -24,6 +24,6 @@ exports.conf = {
 
 exports.help = {
   name: 'skip',
-  description: 'Skips a currently playing song',
+  description: 'Skips a currently playing song.',
   usage: 'skip'
 };

@@ -16,6 +16,6 @@ exports.conf = {
 
 exports.help = {
   name: 'embed',
-  description: 'Embeds the selected message',
+  description: 'Embeds a custom message.',
   usage: 'embed [description] [title] [color]'
 };

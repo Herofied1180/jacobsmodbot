@@ -1,5 +1,5 @@
 exports.run = (client, message) => {
-  message.channel.send('Group:\nhttps://www.roblox.com/My/Groups.aspx?gid=3375991');
+  message.channel.send('Group:\nhttps://www.roblox.com/My/Groups.aspx?gid=3735673');
 };    
 
 exports.conf = {
@@ -11,6 +11,6 @@ exports.conf = {
 
 exports.help = {
   name: 'group',
-  description: 'Shows jacob`s Roblox group',
+  description: 'The Diamond Bar And Grill ROBLOX group.',
   usage: 'group'
 };

@@ -16,12 +16,12 @@ exports.run = (client, message, params) => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['h', 'Help'],
+  aliases: ['?', 'Help'],
   permLevel: 0
 };
 
 exports.help = {
   name: 'help',
-  description: 'Displays all the available commands for your permission level.',
+  description: 'A list of bot commands.',
   usage: 'help [command]'
 };

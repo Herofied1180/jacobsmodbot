@@ -1,5 +1,3 @@
-//W.I.P Command
-
 const {RichEmbed} = require('discord.js');
 const {caseNumber} = require('../util/caseNumber.js');
 const settings = require('../settings.json');
@@ -9,7 +7,8 @@ exports.run = async (client, message, args) => {
   const caseNum = await caseNumber(client, action_log);
   if (!action_log) return message.reply('Unable to find a action-log channel');
   if (message.mentions.users.size < 1) return message.channel.send('You must mention someone to warn them.').catch(console.error);
-  const reason = args.splice(1, args.length).join(' ') || `Awaiting moderator's input. Use ${settings.prefix}reason ${caseNum} <reason>.`;
+  const reason = args.splice(1, args.length).join(' ') || `No specified reason.`;
+  user.send(`You have been warned in Diamond Bar And Grill, by ${message.author} for:\n${reason}`);
   const embed = new RichEmbed()
   .setColor(0x00AE86)
   .setTimestamp()

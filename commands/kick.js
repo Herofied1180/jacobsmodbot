@@ -1,9 +1,10 @@
 const Discord = require('discord.js');
 exports.run = (client, message, args) => {
-  const reason = args.slice(1).join(' ');
+  const reason = args.slice(1).join(' ') || `No specified reason`;
   const user = message.mentions.users.first();
-  const modlog = client.channels.find('name', 'action_log');
-  if (!modlog) return message.reply('Unable to find an action_log channel.');
+  user.send(`You have been kicked from Diamond Bar And Grill, by ${message.author} for:\n${reason}`);
+  const modlog = client.channels.find('name', 'action-log');
+  if (!modlog) return message.reply('Unable to find an action-log channel.');
   if (reason.length < 1) return message.reply('You must supply a reason for the kick.');
   if (message.mentions.users.size < 1) return message.reply('You must mention someone to kick them.').catch(console.error);
 

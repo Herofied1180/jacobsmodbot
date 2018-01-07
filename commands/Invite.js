@@ -1,7 +1,7 @@
 exports.run = (client, message) => {
-  message.channel.send('To join jacob`s server click this link')
+  message.channel.send('Invite link:')
 .then(msg => {
-  message.channel.send('https://discord.gg/fp4Ht35');
+  message.channel.send('https://discord.gg/46xRJxy');
     });
 };    
 
@@ -14,6 +14,6 @@ exports.conf = {
 
 exports.help = {
   name: 'invite',
-  description: 'Gives you a link to jacob`s discord server.',
+  description: `Shows the Discord server's invite link.`,
   usage: 'invite'
 };

@@ -1,7 +1,7 @@
 exports.run = (client, message) => {
   var c = [
-    "you got heads!",
-    "you got tails!"
+    "You got heads!",
+    "You got tails!"
   ]
   message.channel.send('Flipping coin...')
 .then(msg => {
@@ -18,6 +18,6 @@ exports.conf = {
 
 exports.help = {
   name: 'flip',
-  description: 'Flips a coin and returns heads or tails randomly',
+  description: 'Flips a coin and returns heads or tails randomly.',
   usage: 'flip'
 };

@@ -11,6 +11,6 @@ exports.conf = {
 
 exports.help = {
   name: 'me',
-  description: 'A roleplay command used to show action by another',
-  usage: 'me'
+  description: 'Used to make text italic.',
+  usage: 'me [Message]'
 };

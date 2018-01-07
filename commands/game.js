@@ -1,5 +1,5 @@
 exports.run = (client, message) => {
-  message.channel.send('Game:\nhttps://www.roblox.com/games/1165330074/Kohls-Admin-House');
+  message.channel.send('Game:\nIn development.');
 };    
 
 exports.conf = {
@@ -11,6 +11,6 @@ exports.conf = {
 
 exports.help = {
   name: 'game',
-  description: 'Shows jacob`s Roblox game',
+  description: 'The Diamond Bar And Grill ROBLOX game.',
   usage: 'game'
 };

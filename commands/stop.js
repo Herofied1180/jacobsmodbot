@@ -23,6 +23,6 @@ exports.conf = {
 
 exports.help = {
   name: 'stop',
-  description: 'Stops a currently playing song',
+  description: 'Stops a song that is currently playing.',
   usage: 'stop'
 };

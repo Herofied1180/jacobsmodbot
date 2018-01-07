@@ -1,7 +1,7 @@
 exports.run = (client, message) => {
   message.channel.send('Loading Command...')
 .then(msg => {
-      message.reply("```"+"Level 0 = everone\n"+"Level 1 = Admin role\n"+"Level 2 = Head Admin role\n"+"Level 3 = Co-Owner\n"+"Level 4 = Owner Rank\n"+"Level 5 = Bot Owners/Server Owners\n"+"```");
+      message.reply("```"+"Level 0 = Everyone\n"+"Level 1 = Admin\n"+"Level 2 = Head Admin\n"+"Level 3 = Co-Owner\n"+"Level 4 = Owner Rank\n"+"Level 5 = Bot Owners/Server Owners\n"+"```");
     });
 };    
 
@@ -14,6 +14,6 @@ exports.conf = {
 
 exports.help = {
   name: 'permlevel',
-  description: 'Shows all the perm levels',
+  description: 'Shows all the permission levels.',
   usage: 'permlevel'
 };

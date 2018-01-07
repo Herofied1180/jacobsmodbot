@@ -18,12 +18,12 @@ function play(connection, message) {
 exports.run = (client, message) => {
   const args = message.content.split(' ')
   if (!args[1]) {
-    message.channel.send('Please Include A Link');
+    message.channel.send('Please provide a link.');
     return;
   }
 
   if (!message.member.voiceChannel) {
-    message.channel.send('Please Connect To a Voice Channel');
+    message.channel.send('Please connect to a voice channel.');
     return;
   }
   if (!servers[message.guild.id]) servers[message.guild.id] = {
@@ -49,6 +49,6 @@ exports.conf = {
 
 exports.help = {
   name: 'play',
-  description: 'Plays a yotube video in a voice channel via link',
-  usage: 'play [youtube link]'
+  description: 'Plays a yotube video in a voice channel via link.',
+  usage: 'play [Youtube Link]'
 };

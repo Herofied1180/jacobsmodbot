@@ -15,6 +15,6 @@ exports.conf = {
 
 exports.help = {
   name: 'setgame',
-  description: 'Sets the game the bot is playing to the specified game',
+  description: 'Sets the game the bot is playing to the specified game.',
   usage: 'setgame [game]'
 };

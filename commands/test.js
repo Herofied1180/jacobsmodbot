@@ -14,6 +14,6 @@ exports.conf = {
 
 exports.help = {
   name: 'test',
-  description: 'Developer command only.',
+  description: 'Developers only.',
   usage: 'test'
 };

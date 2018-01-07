@@ -2,8 +2,9 @@ const Discord = require('discord.js');
 exports.run = (client, message, args) => {
   let reason = args.slice(1).join(' ');
   let user = message.mentions.users.first();
-  let action_log = client.channels.find('name', 'action_log');
-  if (!action_log) return message.reply('Unable to find an action_log channel.');
+  user.send(`You have been banned from Diamond Bar And Grill, by ${message.author} for:\n${reason}`);
+  let action_log = client.channels.find('name', 'action-log');
+  if (!action_log) return message.reply('Unable to find an action-log channel.');
   if (reason.length < 1) return message.reply('You must supply a reason for the ban.');
   if (message.mentions.users.size < 1) return message.reply('You must mention someone to ban them.').catch(console.error);
 

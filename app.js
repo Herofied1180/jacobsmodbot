@@ -132,7 +132,7 @@ client.elevation = message => {
     if (admin_role && message.member.roles.has('name', settings.adminrolename)) permlvl = 2;
   } else if (message.guild.roles.has('name', settings.coownerrolename)) {
     let co_role = message.guild.roles.find('name', settings.coownerrolename);
-    if (co_role && message.member.roles.has('name', settings.coownerrolename)) permlvl = 3;
+    if (co_role && message.member.roles.has('name', settings.coownerrolename)) permlvl = 4;
   } else if (message.guild.roles.has('name', settings.coownerrolename)) {
     let owner_role = message.guild.roles.find('name', settings.ownerrolename);
     if (owner_role && message.member.roles.has('name', settings.ownerrolename)) permlvl = 5;
